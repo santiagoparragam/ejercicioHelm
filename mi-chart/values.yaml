@@ -8,6 +8,6 @@ resources:
     cpu: "1000m"
     memory: "1500Mi"
 labels:
-  app: mi-app-2
+  app: mi-app-3
   minReplicas: 1
   maxReplicas: 5
