@@ -24,8 +24,8 @@ spec:
             - containerPort: {{ .Values.container.port }}
           resources:
             requests:
-              cpu: "500m"
-              memory: "800Mi"
+              cpu: {{ .Values.resources.cpu }}
+              memory: {{ .Values.resources.memory }}
             limits:
-              cpu: "1000m"
-              memory: "1500Mi"
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}

@@ -1,3 +1,13 @@
 container:
   tag: 34
   port: 3000
+resources:
+  cpu: "500m"
+  memory: "800Mi"
+  limits:
+    cpu: "1000m"
+    memory: "1500Mi"
+labels:
+  app: mi-app-2
+  minReplicas: 1
+  maxReplicas: 5
