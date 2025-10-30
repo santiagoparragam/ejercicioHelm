@@ -4,17 +4,17 @@ metadata:
   name: {{ .Values.names.deployment }}
   namespace: santiago-parraga-dev
   labels:
-    app: {{ .Values.labels.app }}
+    app: {{ .Values.names.app }}
     areanegocio: tecnologia
 spec:
   replicas: {{ .Values.labels.minReplicas }}
   selector:
     matchLabels:
-      app: {{ .Values.labels.app }}
+      app: {{ .Values.names.app }}
   template:
     metadata:
       labels:
-        app: {{ .Values.labels.app }}
+        app: {{ .Values.names.app }}
     spec:
       containers:
         - name: contenedor-principal
