@@ -27,7 +27,7 @@ service:
 probes:
   startup:
     path: /startup
-    port: 4000
+    port: 3000
     failureThreshold: 10
     periodSeconds: 5
 configmap:
