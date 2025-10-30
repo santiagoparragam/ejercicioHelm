@@ -4,11 +4,10 @@ metadata:
   name: {{ .Values.names.service }}
   namespace: {{ .Values.namespace }}  # Asegúrate de que coincida con tu Deployment
 spec:
-  type: {{ .Values.service.type }}
   selector:
     app: {{ .Values.names.app }} # Debe coincidir con las labels del Deployment
   ports:
-    - name: http
     - protocol: TCP
       port: {{ .Values.service.port }}        # Puerto del Service
       targetPort: {{ .Values.container.port }}  # Puerto del contenedor
+  type: {{ .Values.service.type }}
