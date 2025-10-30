@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mi-servicio-3
-  namespace: santiago-parraga-dev  # Asegúrate de que coincida con tu Deployment
+  name: {{ .Values.names.service }}
+  namespace: {{ .Values.namespace }}  # Asegúrate de que coincida con tu Deployment
 spec:
+  type: {{ .Values.service.type }}
   selector:
-    app: mi-app-3  # Debe coincidir con las labels del Deployment
+    app: {{ .Values.names.app }} # Debe coincidir con las labels del Deployment
   ports:
+    - name: http
     - protocol: TCP
-      port: 4000        # Puerto del Service
+      port: {{ .Values.service.port }}        # Puerto del Service
       targetPort: {{ .Values.container.port }}  # Puerto del contenedor
-  type: ClusterIP     # Cambia a NodePort o LoadBalancer si quieres acceso externo
