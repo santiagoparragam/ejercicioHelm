@@ -21,7 +21,7 @@ spec:
           image: santiagoparraga/holamundobasespm:build-{{ .Values.container.tag }}  # <-- Reemplaza con la imagen que quieras usar
           imagePullPolicy: Always
           ports:
-            - containerPort: {{ .Values.container.port }}
+            - containerPort: {{ .Values.service.port }}
           resources:
             requests:
               cpu: {{ .Values.resources.cpu }}
