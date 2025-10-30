@@ -12,6 +12,7 @@ labels:
   minReplicas: 1
   maxReplicas: 5
 names:
+  app: "mi-app-3"
   deployment: "mi-deployment-3"
   service: "mi-servicio-3"
   configmap: "mi-configmap-3"
