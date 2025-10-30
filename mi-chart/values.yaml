@@ -23,11 +23,11 @@ image:
   pullPolicy: Always
 service:
   type: ClusterIP
-  port: 8080
+  port: 4000
 probes:
   startup:
     path: /startup
-    port: 8080
+    port: 4000
     failureThreshold: 10
     periodSeconds: 5
 configmap:
