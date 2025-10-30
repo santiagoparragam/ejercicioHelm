@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mi-deployment-3
+  name: {{ .Values.names.deployment }}
   namespace: santiago-parraga-dev
   labels:
     app: {{ .Values.labels.app }}
