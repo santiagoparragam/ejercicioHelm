@@ -1,5 +1,5 @@
 container:
-  tag: 39
+  tag: 20
   port: 3000
 resources:
   cpu: "500m"
@@ -19,8 +19,8 @@ names:
   secret: "mi-secret-3"
   hpa: "mi-hpa-3"
 image:
-  repository: santiagoparraga/holamundobasespm
-  tag: "build-22"        # cambia aquí tu build
+  repository: santiagoparraga/holamundobasespm2
+  tag: "build-20"        # cambia aquí tu build
   pullPolicy: Always
 service:
   type: ClusterIP
